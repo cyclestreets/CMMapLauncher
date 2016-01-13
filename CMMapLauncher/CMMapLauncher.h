@@ -50,7 +50,8 @@ typedef NS_ENUM(NSUInteger, CMMapApp) {
     CMMapAppNavigon,        // Navigon
     CMMapAppTheTransitApp,  // The Transit App
     CMMapAppWaze,           // Waze
-    CMMapAppYandex,         // Yandex Navigator
+	CMMapAppYandex,         // Yandex Navigator
+	CMMapAppCycleStreets,	// CycleStreets
 };
 
 @interface CMMapLauncher : NSObject
