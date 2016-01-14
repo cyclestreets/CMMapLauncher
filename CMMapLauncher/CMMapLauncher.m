@@ -188,10 +188,10 @@
     }else if (mapApp == CMMapAppCycleStreets) {
 		NSMutableArray *params = [NSMutableArray arrayWithCapacity:2];
 		if (start && !start.isCurrentLocation) {
-			[params addObject:[NSString stringWithFormat:@"startCoords=%f,%f", start.coordinate.latitude, start.coordinate.longitude]];
+			[params addObject:[NSString stringWithFormat:@"startCoord=%f,%f", start.coordinate.latitude, start.coordinate.longitude]];
 		}
 		if (end && !end.isCurrentLocation) {
-			[params addObject:[NSString stringWithFormat:@"endCoords=%f,%f", end.coordinate.latitude, end.coordinate.longitude]];
+			[params addObject:[NSString stringWithFormat:@"endCoord=%f,%f", end.coordinate.latitude, end.coordinate.longitude]];
 		}
 		NSString *url = [NSString stringWithFormat:@"%@directions/?%@",[CMMapLauncher urlPrefixForMapApp:CMMapAppCycleStreets], [params componentsJoinedByString:@"&"]];
 		return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
